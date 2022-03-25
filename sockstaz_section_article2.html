@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./sockstaz_section_article2_style.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 이벤트, 스냅 버튼 -->
+    <div class="p_button-center">
+        <div class="p_button-event">
+            <button type="submit" class="p_button-event-btn" style='cursor:pointer'>EVENT</button>
+        </div>
+        <div class="p_button-snap">
+            <button type="submit" class="p_button-snap-btn" style='cursor:pointer'>SNAP</button>
+        </div>
+    </div>
+    <!-- 이벤트 페이지 -->
+        <div class="p_container-01">
+            <a href="#">
+                <img src="./image/article2_image01.jpeg" class="p_card-img">
+            </a>
+            <a href="#">
+                <img src="./image/article2_image02.jpeg" class="p_card-img">
+            </a>
+            <a href="#">
+                <img src="./image/article2_image03.jpeg" class="p_card-img">
+            </a>
+            <div class="p_event-desc">
+                <p class="p_card-title">&nbsp; &nbsp; 삭스타즈 앱 출시 기념 이벤트</p>
+                <p class="p_card-text">&nbsp; &nbsp; <b>2021. 09. 03 ~</b> 진행중</p>
+            </div>
+            <div class="p_event-desc">
+                <p class="p_card-title">&nbsp; &nbsp; 삭스타즈 향기배송 서비스</p>
+                <p class="p_card-text">&nbsp; &nbsp; 항시 진행</p>
+            </div>
+            <div class="p_event-desc">
+                <p class="p_card-title">&nbsp; &nbsp; 더욱 강화된 신규/기존회원 혜택</p>
+                <p class="p_card-text">&nbsp; &nbsp; <b>2018. 01. 08 UPDATE</b></p>
+            </div>
+            <!-- 'more event' 버튼 -->
+            <div class="p_button-event">
+                <button type="submit" class="p_button-more-event-btn">MORE EVENT</button>
+            </div>
+        </div>
+    <!-- 스냅 페이지 -->
+        <div class="p_container-02">
+            <a href="#">
+                <img src="./image/article2_image04.png" class="p_card-img">
+            </a>
+            <a href="#">
+                <img src="./image/article2_image05.png" class="p_card-img">
+            </a>
+            <a href="#">
+                <img src="./image/article2_image06.png" class="p_card-img">
+            </a> 
+        <!-- 'more snap' 버튼 -->
+        <div class="p_button-snap">
+            <button type="submit" class="p_button-more-snap-btn">MORE SNAP</button>
+        </div>
+        </div>
+    <script>
+    // section2 - 로드 시 디폴트 페이지
+    $(document).ready(function() {
+        $('.p_container-01').show();
+        $('.p_container-02').hide();
+     });
+
+    // section2 > event button 클릭 시 효과
+    $('.p_button-event-btn').click(function() {
+        $('.p_container-01').fadeIn(350);
+        $('.p_container-02').fadeOut(350);
+        $('.p_button-event-btn').css({
+            "background-color":"#212121",
+            "color": "#FFFFFF"});
+        $('.p_button-snap-btn').css({
+            "background-color":"#FFFFFF",  
+            "color":"#212121"});
+    });
+    // section2 > snap button 클릭 시 효과
+    $('.p_button-snap-btn').click(function() {
+        $('.p_container-02').fadeIn(350);
+        $('.p_container-01').fadeOut(350);
+        $('.p_button-snap-btn').css({
+            "background-color" : "#212121",
+            "color": "#FFFFFF",
+            "border" : "#BBBBBB",
+            "border-style" : "solid",
+            "border-width" : "1px",
+            "border-spacing": "0px"});
+        $('.p_button-event-btn').css({
+            "background-color":"#FFFFFF",
+            "color":"#212121",
+            "border" : "#BBBBBB",
+            "border-style" : "solid",
+            "border-width" : "1px",
+            "border-spacing": "0px"});
+    });
+    </script>
+</body>
+</html>
